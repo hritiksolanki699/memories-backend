@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
+mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.CONNECTION_URL, {
     dbName: "memories",
